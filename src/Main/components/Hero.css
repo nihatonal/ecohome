@@ -70,3 +70,43 @@
 .hero-btn:hover {
   background: #34343d;
 }
+
+@media screen and (max-width: 767px) {
+  .hero-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    padding-bottom: 22px;
+  }
+  .hero-content-wrapper {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    order: 1;
+  }
+  .hero_suptitle {
+    font-size: 12px;
+    line-height: 120%;
+  }
+  .hero-title {
+    font-size: 38px;
+    line-height: 100%;
+    margin: 20px 0;
+  }
+  .hero_subtitle {
+    font-size: 16px;
+    line-height: 113%;
+  }
+  .hero-btn {
+    width: 254px;
+    height: 55px;
+    border-radius: 55px;
+    margin-top: 46px;
+  }
+}
