@@ -12,6 +12,12 @@
   cursor: pointer;
   margin-bottom: 5px;
   /* margin-left: 10px; */
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  #nav-icon {
+    display: flex;
+  }
 }
 #nav-icon.open {
   width: 33px;
@@ -76,4 +82,3 @@
   transform: rotate(-135deg);
   width: 100%;
 }
-

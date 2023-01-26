@@ -1,10 +1,10 @@
 .nav-items-wrapper {
-  width: 491px;
-  height: 24px;
+  width: 454px;
+  height: 21px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 25px 0 241px;
+
 }
 @media screen and (max-width: 767px) {
   .nav-items-wrapper {
@@ -12,20 +12,18 @@
   }
 }
 .nav-item {
-  font-family: "DIN";
+  font-family: var(--font-golos);
   font-style: normal;
-  font-weight: 300;
-  font-size: 14px;
-  line-height: 24px;
-  text-transform: uppercase;
-  color: var(--color-black);
-  text-underline-offset: 0.3em;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+  color: var(--color-white);
 }
 .nav-item:hover {
-  text-decoration: underline;
+  color: red;
 }
 .active-nav-item {
-  text-decoration: underline;
+  color: red;
 }
 
 @media screen and (max-width: 767px) {

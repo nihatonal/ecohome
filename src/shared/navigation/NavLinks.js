@@ -1,49 +1,63 @@
 import React, { useContext } from 'react';
-import { NavLink } from 'react-router-dom';
-import { LanguageContext } from "../context/Language";
-import LanguageSelector from '../UI/LanguageSelector';
+import { HashLink as Link } from "react-router-hash-link";
+import { useLocation } from "react-router-dom";
 import './NavLinks.css';
 function NavLinks(props) {
-    const lang = useContext(LanguageContext);
+    const location = useLocation();
     return (
         <div className="nav-items-wrapper">
             <div className="nav-item-wrapper" onClick={props.close}>
-                <NavLink to='/' className={({ isActive }) =>
-                    isActive ? "nav-item active-nav-item" : "nav-item"
-                }>{lang.dictionary["navlinks"][0]}
-                </NavLink>
+                <Link
+                    className={
+                        location.hash === "#aboutcompany" ? `nav-item active-nav-item` : `nav-item`
+                    }
+                    to="/#aboutcompany"
+                    activeclassname="selected"
+                    onClick={props.onClickNavItem}
+                    smooth
+                >
+                    О компании
+                </Link>
             </div>
             <div className="nav-item-wrapper" onClick={props.close}>
-                <NavLink to='/thehut' className={({ isActive }) =>
-                    isActive ? "nav-item active-nav-item" : "nav-item"
-                }>{lang.dictionary["navlinks"][1]}
-                </NavLink>
+                <Link
+                    className={
+                        location.hash === "#construction" ? `nav-item active-nav-item` : `nav-item`
+                    }
+                    to="/#construction"
+                    activeclassname="selected"
+                    onClick={props.onClickNavItem}
+                    smooth
+                >
+                    Строительство домов
+                </Link>
             </div>
             <div className="nav-item-wrapper" onClick={props.close}>
-                <NavLink to='/thearea' className={({ isActive }) =>
-                    isActive ? "nav-item active-nav-item" : "nav-item"
-                }>{lang.dictionary["navlinks"][2]}
-                </NavLink>
+                <Link
+                    className={
+                        location.hash === "#works" ? `nav-item active-nav-item` : `nav-item`
+                    }
+                    to="/#works"
+                    activeclassname="selected"
+                    onClick={props.onClickNavItem}
+                    smooth
+                >
+                    Работы
+                </Link>
             </div>
             <div className="nav-item-wrapper" onClick={props.close}>
-                <NavLink to='/booking' className={({ isActive }) =>
-                    isActive ? "nav-item active-nav-item" : "nav-item"
-                }>{lang.dictionary["navlinks"][3]}
-                </NavLink>
+                <Link
+                    className={
+                        location.hash === "#contacts" ? `nav-item active-nav-item` : `nav-item`
+                    }
+                    to="/#contacts"
+                    activeclassname="selected"
+                    onClick={props.onClickNavItem}
+                    smooth
+                >
+                    Контакты
+                </Link>
             </div>
-            <div className="nav-item-wrapper" onClick={props.close}>
-                <NavLink to='/aboutus' className={({ isActive }) =>
-                    isActive ? "nav-item active-nav-item" : "nav-item"
-                }>{lang.dictionary["navlinks"][4]}
-                </NavLink>
-            </div>
-            <div className="nav-item-wrapper" onClick={props.close}>
-                <NavLink to='/faq' className={({ isActive }) =>
-                    isActive ? "nav-item active-nav-item" : "nav-item"
-                }>{lang.dictionary["navlinks"][5]}
-                </NavLink>
-            </div>
-            <LanguageSelector />
         </div>
     );
 }
