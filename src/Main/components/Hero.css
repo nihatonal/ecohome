@@ -4,7 +4,6 @@
   background: url("../../assets/images/hero_bg.png");
   background-repeat: no-repeat;
   background-position: center center;
-  background-attachment: fixed;
   background-size: cover;
   position: relative;
 }
@@ -29,9 +28,7 @@
   line-height: 130%;
   letter-spacing: 0.06em;
   color: #ffffff;
-  text-shadow: -6px 62px 25px rgba(0, 0, 0, 0.01),
-    -3px 35px 21px rgba(0, 0, 0, 0.05), -1px 16px 16px rgba(0, 0, 0, 0.09),
-    0px 4px 9px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
+  text-shadow: var(--text-shadow);
 }
 .hero-title {
   font-weight: 700;
@@ -42,9 +39,7 @@
   font-weight: 400;
   font-size: 20px;
   line-height: 113%;
-  text-shadow: -6px 62px 25px rgba(0, 0, 0, 0.01),
-    -3px 35px 21px rgba(0, 0, 0, 0.05), -1px 16px 16px rgba(0, 0, 0, 0.09),
-    0px 4px 9px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
+  text-shadow: var(--text-shadow);
 }
 .hero-btn {
   width: 254px;

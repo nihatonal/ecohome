@@ -1,0 +1,16 @@
+.section_faq-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 193px;
+}
+
+.section_faq-wrapper ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 186px;
+  margin-top: 24px;
+  list-style-position: inside;
+}

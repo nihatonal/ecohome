@@ -1,0 +1,18 @@
+.section_director-wrapper {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  padding-top: 172px;
+  column-gap: 40px;
+}
+.section_director-wrapper img {
+    grid-row: 1 / span 2;
+    margin-top: 80px;
+}
+.section_director-wrapper .section_about-title {
+  margin-top: auto;
+  margin-bottom: 20px;
+}
+.section_director-wrapper .section_about-content-text {
+  grid-column: 2;
+  margin-bottom: auto;
+}

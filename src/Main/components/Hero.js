@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useInView } from "react-intersection-observer";
 import { ReactSVG } from 'react-svg'
 import { HashLink as Link } from "react-router-hash-link";
 import { BsFillPlayFill } from "react-icons/bs";
@@ -6,8 +7,20 @@ import { BsFillPlayFill } from "react-icons/bs";
 import hero_image from '../../assets/images/hero_image.svg'
 import './Hero.css';
 function Hero(props) {
+    const { ref, inView, entry } = useInView({
+        /* Optional options */
+        rootMargin: '0px',
+        threshold: 0.9
+    });
+
+    // useEffect(() => {
+    //     if (inView) {
+    //         document.location.replace('/')
+    //     }
+    // }, [inView])
+
     return (
-        <div className="hero-container">
+        <div ref={ref} className="hero-container">
             <div className="hero-wrapper">
                 <div className="hero-content-wrapper">
                     <p className="hero_suptitle">

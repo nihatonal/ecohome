@@ -1,0 +1,146 @@
+.aboutcompany-container {
+  height: 800px;
+  background: linear-gradient(0deg, #1e262f, #1e262f), #181c1d;
+}
+.aboutcompany-wrapper {
+  height: 800px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+.line-wrappers {
+  position: absolute;
+}
+.line-short {
+  display: block;
+  background: rgba(255, 255, 255, 0.1);
+  position: absolute;
+}
+.line-tall {
+  display: block;
+  position: absolute;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.1);
+}
+.aboutcompany-navs {
+  display: flex;
+  position: relative;
+}
+.aboutcompany-navs .line-short {
+  display: flex;
+  position: absolute;
+  width: 3px;
+  height: 176px;
+}
+.aboutcompany-navs .line-tall {
+  display: flex;
+  position: absolute;
+  height: 624px;
+  top: 176px;
+  left: 1px;
+}
+.aboutcompany-navs .line-wrappers:nth-last-child(2) {
+  right: 0;
+}
+.aboutcompany-navs .line-wrappers:nth-last-child(2) .line-short {
+  height: 99px;
+}
+.aboutcompany-navs .line-wrappers:nth-last-child(2) .line-tall {
+  height: 701px;
+  top: 99px;
+}
+
+.aboutcompany-navs ul {
+  width: 200px;
+  height: 115px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  list-style: none;
+  margin: 342px 0 0 67px;
+  position: relative;
+}
+.aboutcompany-navs ul::before {
+  content: "ЭкоДом";
+  position: absolute;
+  left: -142px;
+  top: 55px;
+  font-family: var(--font-golos);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: rgba(255, 255, 255, 0.1);
+
+  transform: rotate(-90deg);
+}
+.about_nav_item {
+  font-family: var(--font-inter);
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 113%;
+  letter-spacing: -0.02em;
+  color: var(--color-white);
+  opacity: 0.25;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.about_nav_item:hover {
+  opacity: 1;
+}
+.about_nav_item:nth-last-child(1) {
+  font-weight: 300;
+  font-size: 18px;
+}
+
+.active_about_nav_item {
+  font-weight: 600;
+  font-size: 32px;
+  opacity: 1;
+}
+.active_about_nav_item.about_nav_item:nth-last-child(1) {
+  font-weight: 600;
+  font-size: 32px;
+  opacity: 1;
+}
+
+/* contents*/
+.aboutcompany-content {
+  display: flex;
+  position: relative;
+}
+.aboutcompany-content .line-wrappers {
+  right: 0;
+}
+.aboutcompany-content .line-short {
+  position: absolute;
+  width: 3px;
+  height: 27px;
+}
+.aboutcompany-content .line-tall {
+  position: absolute;
+  height: 773px;
+  top: 27px;
+  left: 1px;
+}
+.section_about-title {
+  font-family: var(--font-oranienbaum);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 56px;
+  line-height: 113%;
+  color: rgba(255, 255, 255, 0.8);
+  text-shadow: var(--text-shadow);
+}
+.section_about-content-text {
+  font-family: var(--font-inter);
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 114%;
+  letter-spacing: -0.02em;
+  color: rgba(255, 255, 255, 0.8);
+  text-shadow: var(--text-shadow);
+}

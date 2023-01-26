@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { HashLink as Link } from "react-router-hash-link";
 import { useLocation } from "react-router-dom";
 import './NavLinks.css';

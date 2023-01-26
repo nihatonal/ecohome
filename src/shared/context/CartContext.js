@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import React, { createContext, useState } from "react";
 export const CartContext = createContext({
     items: [],
     getProductQuantity: () => { },
@@ -13,16 +13,16 @@ export const CartContext = createContext({
 
 export function CartProvider({ children }) {
     const [cartProducts, setCartProducts] = useState([]);
-    
-   
+
+
     function getProductQuantity(id) {
-        const quantity = cartProducts.find(product => product.id === id)?.quantity;
+        // const quantity = cartProducts.find(product => product.id === id) ? quantity : null;
 
-        if (quantity === undefined) {
-            return 0;
-        }
+        // if (quantity === undefined) {
+        //     return 0;
+        // }
 
-        return quantity;
+        // return quantity;
     }
 
     function addOneToCart(id) {
