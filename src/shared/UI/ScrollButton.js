@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { FaArrowUp } from 'react-icons/fa';
-
+import { CartContext } from '../context/CartContext';
 import './ScrollButton.css';
 const ScrollButton = () => {
 
-
+    const cart = useContext(CartContext)
 
     const [visible, setVisible] = useState(false)
 
@@ -20,22 +20,14 @@ const ScrollButton = () => {
     };
 
     const scrollToTop = () => {
-        const scrolled = window.pageYOffset;
-        console.log(scrolled)
         window.scrollTo({
             top: 0,
             behavior: 'smooth'
             /* you can also use 'auto' behaviour
                 in place of 'smooth' */
         });
-        console.log(scrolled)
-        if (scrolled <= 800) {
-            console.log('scrolled')
-            setTimeout(() => {
-                document.location.replace('/#')
-            }, 500)
+        cart.resetNavbar(false)
 
-        }
     };
 
     window.addEventListener('scroll', toggleVisible);

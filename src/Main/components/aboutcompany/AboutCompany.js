@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { useInView } from "react-intersection-observer";
+
 import SectionAboutCompany from './SectionAboutCompany';
 import SectionDirector from './SectionDirector';
 import SectionFaq from './SectionFaq';
 import './AboutCompany.css';
 function AboutCompany(props) {
-
     const [activeId, setActiveId] = useState('about_nav_item-1');
     const navs = [
         { id: 'about_nav_item-1', text: "О компании" },
@@ -23,7 +23,7 @@ function AboutCompany(props) {
         opacity: 1,
         transition: "all ease .4s"
     }
-    const { ref, inView, entry } = useInView({
+    const { ref, inView } = useInView({
         /* Optional options */
         rootMargin: '0px',
         threshold: 0.9
@@ -31,7 +31,7 @@ function AboutCompany(props) {
 
     useEffect(() => {
         if (inView) {
-            document.location.replace('/#aboutcompany')
+            // document.location.replace('/#aboutcompany')
         }
 
     }, [inView])

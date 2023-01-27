@@ -1,6 +1,7 @@
 import React, { createContext, useState } from "react";
 export const CartContext = createContext({
     items: [],
+    activeNav: false,
     getProductQuantity: () => { },
     addOneToCart: () => { },
     removeOneFromCart: () => { },
@@ -9,12 +10,16 @@ export const CartContext = createContext({
     addAdditionsToCart: () => { },
     removeAdditionsToCart: () => { },
     modalHandler: () => { },
+    resetNavbar: () => { },
 });
 
 export function CartProvider({ children }) {
     const [cartProducts, setCartProducts] = useState([]);
+    const [nav, setNav] = useState(false);
 
-
+    function resetNavbar(x) {
+        setNav(x)
+    }
     function getProductQuantity(id) {
         // const quantity = cartProducts.find(product => product.id === id) ? quantity : null;
 
@@ -129,6 +134,7 @@ export function CartProvider({ children }) {
 
     const contextValue = {
         items: cartProducts,
+        activeNav: nav,
         getProductQuantity,
         addOneToCart,
         removeOneFromCart,
@@ -136,6 +142,7 @@ export function CartProvider({ children }) {
         getTotalCost,
         addAdditionsToCart,
         removeAdditionsToCart,
+        resetNavbar
     }
 
     return (

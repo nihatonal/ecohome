@@ -1,15 +1,18 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { HashLink as Link } from "react-router-hash-link";
 import { useLocation } from "react-router-dom";
+import { CartContext } from '../context/CartContext';
 import './NavLinks.css';
 function NavLinks(props) {
     const location = useLocation();
+    const cart = useContext(CartContext);
+    console.log(cart.activeNav)
     return (
         <div className="nav-items-wrapper">
             <div className="nav-item-wrapper" onClick={props.close}>
                 <Link
                     className={
-                        location.hash === "#aboutcompany" ? `nav-item active-nav-item` : `nav-item`
+                        location.hash === "#aboutcompany" && cart.activeNav ? `nav-item active-nav-item` : `nav-item`
                     }
                     to="/#aboutcompany"
                     activeclassname="selected"
@@ -22,7 +25,7 @@ function NavLinks(props) {
             <div className="nav-item-wrapper" onClick={props.close}>
                 <Link
                     className={
-                        location.hash === "#construction" ? `nav-item active-nav-item` : `nav-item`
+                        location.hash === "#construction" && cart.activeNav ? `nav-item active-nav-item` : `nav-item`
                     }
                     to="/#construction"
                     activeclassname="selected"
@@ -35,7 +38,7 @@ function NavLinks(props) {
             <div className="nav-item-wrapper" onClick={props.close}>
                 <Link
                     className={
-                        location.hash === "#works" ? `nav-item active-nav-item` : `nav-item`
+                        location.hash === "#works" && cart.activeNav ? `nav-item active-nav-item` : `nav-item`
                     }
                     to="/#works"
                     activeclassname="selected"
@@ -48,7 +51,7 @@ function NavLinks(props) {
             <div className="nav-item-wrapper" onClick={props.close}>
                 <Link
                     className={
-                        location.hash === "#contacts" ? `nav-item active-nav-item` : `nav-item`
+                        location.hash === "#contacts" && cart.activeNav ? `nav-item active-nav-item` : `nav-item`
                     }
                     to="/#contacts"
                     activeclassname="selected"
