@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
-
 import { ReactSVG } from 'react-svg';
+import arrow from '../../assets/icons/right_arrow.svg'
 import './Slider.css';
 const Slider = ({ slides }) => {
     const ref = useRef(null);
@@ -10,10 +10,12 @@ const Slider = ({ slides }) => {
 
     useEffect(() => {
         setWidthSlide(ref.current.offsetWidth)
+        console.log(ref.current.offsetWidth)
     }, []);
 
     const nextSlide = () => {
         setCurrent(current === length - 1 ? 0 : current + 1);
+        console.log(current)
     };
 
     const prevSlide = () => {
@@ -27,13 +29,13 @@ const Slider = ({ slides }) => {
     return (
         <section className='slide-container' >
 
-            <button className="slide-arrow-btn" onClick={prevSlide} disabled={current === 0}>
-                112 {/* <ReactSVG className={current === 0 ? 'disable' : null} src={ArrowLeft} /> */}
+            <button className={current === 0 ? "slide-arrow-btn left_arrow arrow_disable " : "slide-arrow-btn left_arrow"} onClick={prevSlide} disabled={current === 0}>
+                <ReactSVG src={arrow} />
             </button>
 
 
             <div ref={ref} className='slide-wrapper'
-                style={{ left: `${-widthSlide * current}px` }}
+                style={{ left: `${-380 * 3 * current}px` }}
             >
                 {slides.map((slide, index) => {
                     return (
@@ -54,8 +56,8 @@ const Slider = ({ slides }) => {
                     );
                 })}
             </div>
-            <button className="slide-arrow-btn" onClick={nextSlide} disabled={current === slides.length - 1}>
-                122 {/* <ReactSVG className={current === slides.length - 1 ? 'disable' : null} src={ArrowRight} /> */}
+            <button className={current === slides.length / 5 + 1 ? "slide-arrow-btn arrow_disable " : "slide-arrow-btn"} onClick={nextSlide} disabled={current === slides.length / 5 + 1}>
+                <ReactSVG src={arrow} />
             </button>
         </section>
     );
