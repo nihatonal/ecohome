@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { useInView } from "react-intersection-observer";
-
 import SectionAboutCompany from './SectionAboutCompany';
 import SectionDirector from './SectionDirector';
 import SectionFaq from './SectionFaq';
 import './AboutCompany.css';
 function AboutCompany(props) {
+
     const [activeId, setActiveId] = useState('about_nav_item-1');
     const navs = [
         { id: 'about_nav_item-1', text: "О компании" },
@@ -13,6 +13,7 @@ function AboutCompany(props) {
         { id: 'about_nav_item-3', text: "Почему мы?" }
 
     ];
+
     const style_inactive = {
         position: "absolute",
         opacity: 0,

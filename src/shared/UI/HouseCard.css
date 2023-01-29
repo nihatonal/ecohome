@@ -1,0 +1,91 @@
+.house {
+  width: 380px;
+  height: 481px;
+  margin-right: 24px;
+  border-radius: 12px;
+  box-shadow: 2px 2px 15px #1f252d69;
+}
+.house-content {
+  display: grid;
+  row-gap: 19px;
+  padding: 18px 18px 19px;
+}
+
+.house_info .house_name {
+  font-family: var(--font-golos);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  margin-bottom: 19px;
+}
+.house_info_items {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 19px;
+  column-gap: 32px;
+}
+.house_info_item {
+  display: flex;
+  align-items: center;
+  font-family: var(--font-golos);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  position: relative;
+}
+.house_info_item svg {
+  margin-right: 12px;
+}
+.house_info_item sup {
+  font-size: 8px;
+  position: relative;
+  top: -5px;
+}
+.house_line {
+  display: block;
+  background: rgba(235, 235, 236, 0.5);
+  height: 1px;
+  /* margin: 21px 0; */
+}
+.house_price {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+.house_price p {
+  font-family: var(--font-golos);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+}
+.house_price p:first-child {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+}
+.house_price button {
+  width: 52px;
+  height: 52px;
+  border-radius: 55px;
+  border: 1px solid #1f252d;
+  background: transparent;
+  box-shadow: 5px 5px 15px #1f252d80;
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.house_price button:hover {
+  background: #1f252d;
+}
+.house_price button:hover svg path {
+  fill: #fff;
+}
+.house_price button svg path {
+  fill: #1f252d;
+}

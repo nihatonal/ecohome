@@ -6,7 +6,6 @@ import './NavLinks.css';
 function NavLinks(props) {
     const location = useLocation();
     const cart = useContext(CartContext);
-    console.log(cart.activeNav)
     return (
         <div className="nav-items-wrapper">
             <div className="nav-item-wrapper" onClick={props.close}>

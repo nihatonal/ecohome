@@ -24,6 +24,7 @@ body {
   height: auto;
   width: 100%;
   overflow-x: hidden;
+  background: #FAFAFA;
 }
 a {
   text-decoration: none;

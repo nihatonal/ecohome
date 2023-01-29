@@ -2,6 +2,7 @@ import React, { createContext, useState } from "react";
 export const CartContext = createContext({
     items: [],
     activeNav: false,
+    slideId: null,
     getProductQuantity: () => { },
     addOneToCart: () => { },
     removeOneFromCart: () => { },
@@ -11,14 +12,19 @@ export const CartContext = createContext({
     removeAdditionsToCart: () => { },
     modalHandler: () => { },
     resetNavbar: () => { },
+    slideIDHandler: () => { },
 });
 
 export function CartProvider({ children }) {
     const [cartProducts, setCartProducts] = useState([]);
     const [nav, setNav] = useState(false);
+    const [slideID, setSlideID] = useState(null)
 
     function resetNavbar(x) {
         setNav(x)
+    }
+    function slideIDHandler(x) {
+        setSlideID(x)
     }
     function getProductQuantity(id) {
         // const quantity = cartProducts.find(product => product.id === id) ? quantity : null;
@@ -135,6 +141,7 @@ export function CartProvider({ children }) {
     const contextValue = {
         items: cartProducts,
         activeNav: nav,
+        slideId: slideID,
         getProductQuantity,
         addOneToCart,
         removeOneFromCart,
@@ -142,7 +149,8 @@ export function CartProvider({ children }) {
         getTotalCost,
         addAdditionsToCart,
         removeAdditionsToCart,
-        resetNavbar
+        resetNavbar,
+        slideIDHandler
     }
 
     return (
