@@ -4,6 +4,7 @@ import Hero from '../components/Hero';
 import AboutCompany from '../components/aboutcompany/AboutCompany';
 import SectionProfit from '../components/SectionProfit';
 import SectionProjects from '../components/SectionProjects';
+import ArgumentOfHouse from '../components/ArgumentOfHouse';
 import './Main.css';
 function Main(props) {
     const [scrollPosition, setScrollPosition] = useState(0);
@@ -31,6 +32,7 @@ function Main(props) {
             <AboutCompany />
             <SectionProfit />
             <SectionProjects />
+            <ArgumentOfHouse />
         </div>
     );
 }
