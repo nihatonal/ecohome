@@ -7,3 +7,14 @@
   text-align: center;
   color: #1f252d;
 }
+.section-suptitle {
+  font-family: var(--font-golos);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: #25252c;
+  text-shadow: var(--text-shadow);
+  text-align: center;
+}

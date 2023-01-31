@@ -5,7 +5,8 @@ import AboutCompany from '../components/aboutcompany/AboutCompany';
 import SectionProfit from '../components/SectionProfit';
 import SectionProjects from '../components/SectionProjects';
 import ArgumentOfHouse from '../components/ArgumentOfHouse';
-import Construction from '../components/Construction'
+import Construction from '../components/Construction';
+import CreateHouse from '../components/createHouse/CreateHouse';
 import './Main.css';
 function Main(props) {
     const [scrollPosition, setScrollPosition] = useState(0);
@@ -35,6 +36,7 @@ function Main(props) {
             <SectionProjects />
             <ArgumentOfHouse />
             <Construction />
+            <CreateHouse />
         </div>
     );
 }
