@@ -15,7 +15,7 @@ function SectionProjects(props) {
 
     useEffect(() => {
         if (inView) {
-            document.location.replace('/#works')
+            // document.location.replace('/#works')
         }
 
     }, [inView])

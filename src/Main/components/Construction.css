@@ -1,0 +1,152 @@
+.construction-container {
+  height: 905px;
+}
+.construction-wrapper {
+  display: flex;
+  align-items: center;
+  margin-top: 38px;
+  padding-left: 52px;
+}
+.construction-navbar {
+  height: 241px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-right: 42px;
+  list-style: none;
+}
+.construction-navbar li {
+  font-family: var(--font-golos);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  color: #1f252d;
+  cursor: pointer;
+  border-radius: 12px;
+  padding: 12px;
+  width: 160px;
+}
+.active-construction-nav-item {
+  background: linear-gradient(0deg, #1f252d, #1f252d), #ffffff;
+}
+.active-construction-nav-item.construction-nav-item {
+  color: #fff;
+}
+
+.construction_content-wrapper {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
+  height: 675px;
+  position: relative;
+}
+.construction_content-item {
+  position: absolute;
+  height: 519px;
+  width: 839px;
+  transition: all 0.5s;
+  right: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+.construction_content-item img {
+  height: 443px;
+}
+.step_wrapper {
+  font-family: var(--font-inter);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: -0.02em;
+  position: absolute;
+  display: flex;
+}
+.step_wrapper p {
+  margin-bottom: auto;
+}
+.step_wrapper p:first-child {
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 12px;
+}
+.step4 .step_info,
+.step3 .step_info {
+  padding-top: 20px;
+  margin-right: 46px;
+}
+.step4 {
+  top: -75px;
+  left: 80px;
+}
+.step3 {
+  top: -75px;
+  right: 220px;
+}
+.step2 .step_info,
+.step1 .step_info {
+  align-self: flex-end;
+  margin-left: 10px;
+}
+.step2 {
+  bottom: -75px;
+  left: 30px;
+}
+.step1 {
+  bottom: -75px;
+  left: 330px;
+}
+
+/* animation*/
+@keyframes slide_in {
+  from {
+    right: 0;
+  }
+  to {
+    right: 280px;
+  }
+}
+@keyframes slide_out {
+  from {
+    right: 280px;
+    height: 519px;
+  }
+  25% {
+    height: 0;
+    right: 280px;
+  }
+  50% {
+    height: 443px;
+    right: 280px;
+  }
+  to {
+    height: 443px;
+    right: 0;
+  }
+}
+
+.active_construction_item {
+  height: 519px;
+  width: 983px;
+  z-index: 99;
+  transition: all 0.5s;
+  overflow: visible;
+  animation-name: slide_in;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear 0.4s;
+}
+.active_construction_item img {
+  height: 519px;
+}
+
+.slide__out {
+  animation-name: slide_out;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.275, 0.985, 0.52, 1.175);
+}
