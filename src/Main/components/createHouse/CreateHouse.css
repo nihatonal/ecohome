@@ -11,10 +11,19 @@
 }
 
 .create-house-content-wrapper {
+  position: relative;
   width: 100%;
   height: 763px;
   border-radius: 12px;
-  background: #1f252d;
+  background: linear-gradient(
+      to top,
+      rgba(31, 37, 45, 0.9),
+      rgba(31, 37, 45, 0.9)
+    ),
+    url("../../../assets/images/house_5.png") center no-repeat;
+  background-size: contain;
+
+  /* background-color: #1f252d; */
 }
 
 .inputs-title {
@@ -24,6 +33,7 @@
   font-size: 24px;
   line-height: 98.5%;
   color: #ffffff;
+  margin-bottom: 41px;
 }
 .input_name {
   font-family: var(--font-golos);
@@ -33,6 +43,7 @@
   line-height: 130%;
   text-align: center;
   letter-spacing: 0.06em;
+  text-shadow: var(--text-shadow);
   color: #ffffff;
 }
 
@@ -42,6 +53,8 @@
   grid-template-columns: 1fr 1fr;
   row-gap: 18px;
   padding: 0 20px;
+  position: absolute;
+  bottom: 18px;
 }
 .create-house-content-wrapper input[type="range"] {
   -webkit-appearance: none;
@@ -101,4 +114,85 @@
 .create-house-nav_button:hover {
   background: #fff;
   color: #1f252d;
+}
+
+.house_selections_container {
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 43px;
+}
+.inputs_wrapper {
+  list-style: none;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 23px;
+  justify-content: space-around;
+}
+.input_wrapper {
+  width: 618px;
+  height: 154px;
+  /* background: conic-gradient(
+    from 9.73deg at 43.45% 0%,
+    #ffffff 0deg,
+    rgba(255, 255, 255, 0) 360deg
+  ); */
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+}
+.checked_flat {
+  border: 1px solid rgba(255, 255, 255, 1);
+}
+.input_wrapper .input_name {
+  line-height: 36px;
+  margin-left: 20px;
+}
+.input_radio .check-button span {
+  border-color: rgba(255, 255, 255, 0.25);
+  color: rgba(255, 255, 255, 0.25);
+}
+.input_radio:hover .check-button span {
+  border-color: rgba(255, 255, 255, 1);
+  color: rgba(255, 255, 255, 1);
+}
+.input_radio .check-button .checked {
+  background: #fff;
+  border: 1px solid #21252c;
+  color: #21252c;
+}
+.input_radio:hover .check-button .checked {
+  background: #fff;
+  border: 1px solid #21252c;
+  color: #21252c;
+}
+
+/*style_section*/
+.stlyes_wrapper .house_input_wrapper {
+  width: 303px;
+  height: 240px;
+}
+.stlyes_wrapper .house_input_radio {
+  top: 182px;
+  left: 133px;
+}
+/*additonal_section*/
+.additionals_wrapper {
+  list-style: none;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 28px;
+}
+.additionals_wrapper .house_input_wrapper {
+  width: 400px;
+  height: 503px;
+}
+.additionals_wrapper .house_input_radio {
+  top: 485px;
+  left: 182px;
 }

@@ -1,0 +1,27 @@
+.success_container .inputs-title {
+  margin-bottom: 11px;
+}
+.success_form_social_links_wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 15px;
+  margin: 43px 0;
+}
+.success_form_social_link p {
+  font-size: 10px;
+  margin-top: 3px;
+}
+.success_form_social_link_icon {
+  width: 66px;
+  height: 66px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 4px;
+}
+
+.success_form_wrapper {
+  width: 522px;
+}

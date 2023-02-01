@@ -33,7 +33,6 @@ function TypeOfHouse(props) {
                         handleChange={handleChange}
                         checked={isRadio === 1}
                     />
-
                 </li>
                 <li className="house_input_wrapper">
                     <img src={house_2} alt='house_2' />

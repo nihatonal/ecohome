@@ -22,7 +22,7 @@ function Hero() {
                     </p>
                     <Link
                         className={'hero-btn'}
-                        to="/#construction"
+                        to="/#construct_house"
                         smooth
                     >
                         <BsFillPlayFill />

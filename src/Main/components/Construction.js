@@ -42,7 +42,7 @@ function Construction(props) {
     });
     useEffect(() => {
         if (inView) {
-            document.location.replace('/#construction')
+            // document.location.replace('/#construction')
         }
 
     }, [inView])
