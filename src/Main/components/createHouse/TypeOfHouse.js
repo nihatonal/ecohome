@@ -19,7 +19,7 @@ function TypeOfHouse(props) {
         cart.addOneToCart('house_type', e.currentTarget.name)
     };
     return (
-        <div className="houses_container">
+        <div style={props.style} className="houses_container house_construction_slide">
             <h3 className='inputs-title'>Какой дом вы хотите построить?</h3>
             <ul className="houses_wrapper">
                 <li className="house_input_wrapper">

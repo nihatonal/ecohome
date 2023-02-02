@@ -6,7 +6,7 @@ import additional_2 from '../../../assets/images/additional_2.png';
 import additional_3 from '../../../assets/images/additional_3.png';
 
 
-function AdditionalBuildings() {
+function AdditionalBuildings(props) {
     const cart = useContext(CartContext)
     const [isRadio, setIsRadio] = useState(null);
 
@@ -15,7 +15,7 @@ function AdditionalBuildings() {
         cart.addOneToCart('additional', e.currentTarget.name)
     };
     return (
-        <div className="house_selections_container">
+        <div style={props.style} className="house_selections_container house_construction_slide">
             <h3 className='inputs-title'>Нужны ли дополнительные строения на участке?</h3>
             <ul className="inputs_wrapper additionals_wrapper">
                 <li className={"house_input_wrapper "}>

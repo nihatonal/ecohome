@@ -10,7 +10,7 @@ import style_6 from '../../../assets/images/style_6.png';
 import style_7 from '../../../assets/images/style_7.png';
 import style_8 from '../../../assets/images/style_8.png';
 
-function StyleOfHouse() {
+function StyleOfHouse(props) {
     const cart = useContext(CartContext)
     const [isRadio, setIsRadio] = useState(null);
 
@@ -19,7 +19,7 @@ function StyleOfHouse() {
         cart.addOneToCart('style', e.currentTarget.name)
     };
     return (
-        <div className="house_selections_container">
+        <div style={props.style} className="house_selections_container house_construction_slide">
             <h3 className='inputs-title'>Какой стиль ближе?</h3>
             <ul className="inputs_wrapper stlyes_wrapper">
                 <li className={"house_input_wrapper "}>

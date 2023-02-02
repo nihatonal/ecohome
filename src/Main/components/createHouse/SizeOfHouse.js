@@ -3,7 +3,7 @@ import { CartContext } from '../../../shared/context/CartContext';
 import RadioButton from '../../../shared/components/formElements/RadioButton'
 
 
-function SizeOfHouse() {
+function SizeOfHouse(props) {
     const cart = useContext(CartContext)
     const [isRadio, setIsRadio] = useState(null);
 
@@ -12,7 +12,7 @@ function SizeOfHouse() {
         cart.addOneToCart('size', e.currentTarget.name)
     };
     return (
-        <div className="house_selections_container">
+        <div style={props.style} className="house_selections_container house_construction_slide">
             <h3 className='inputs-title'>Выберете желаемые размеры дома</h3>
             <ul className="inputs_wrapper">
                 <li className={isRadio === 1 ? "input_wrapper checked_flat" : "input_wrapper"}>

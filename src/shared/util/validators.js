@@ -5,6 +5,7 @@ const VALIDATOR_TYPE_MIN = 'MIN';
 const VALIDATOR_TYPE_EXPIRATION = 'EXPIRATION';
 const VALIDATOR_TYPE_EMAIL = 'EMAIL';
 const VALIDATOR_TYPE_FILE = 'FILE';
+const VALIDATOR_TYPE_PHONE = 'PHONE';
 const VALIDATOR_TYPE_NUMBER = 'NUMBER';
 const VALIDATOR_TYPE_CODE = 'CODE';
 const VALIDATOR_TYPE_PASSWORD = 'PASSWORD';
@@ -25,6 +26,7 @@ export const VALIDATOR_MIN = val => ({ type: VALIDATOR_TYPE_MIN, val: val });
 export const VALIDATOR_EXPIRATION = (year, month) => ({ type: VALIDATOR_TYPE_EXPIRATION, year: year, month: month });
 export const VALIDATOR_EMAIL = () => ({ type: VALIDATOR_TYPE_EMAIL });
 export const VALIDATOR_CODE = () => ({ type: VALIDATOR_TYPE_CODE });
+export const VALIDATOR_PHONE = () => ({ type: VALIDATOR_TYPE_PHONE });
 export const VALIDATOR_PASSWORD = () => ({ type: VALIDATOR_TYPE_PASSWORD });
 export const VALIDATOR_PASSWORD_CONFIRM = val => ({ type: VALIDATOR_TYPE_PASSWORD_CONFIRM, val: val });
 
@@ -53,6 +55,9 @@ export const validate = (value, validators) => {
     }
     if (validator.type === VALIDATOR_TYPE_EMAIL) {
       isValid = isValid && /^\S+@\S+\.\S+$/.test(value);
+    }
+    if (validator.type === VALIDATOR_TYPE_PHONE) {
+      isValid = isValid && /[7-8]{1}[0-9]{3}[0-9]{3}[0-9]{2}[0-9]{2}$/.test(value);
     }
     if (validator.type === VALIDATOR_TYPE_PASSWORD) {
       isValid = isValid && /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]*$/.test(value);

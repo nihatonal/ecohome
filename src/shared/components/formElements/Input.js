@@ -80,13 +80,12 @@ const Input = props => {
     props.element === 'input' ? (
       <input
         id={props.id}
-        style={inputState.value !== '' ? { paddingTop: '12px' } : null}
         type={props.type}
         onChange={changeHandler}
         onBlur={touchHandler}
-        value={props.id === 'card_number' ? cc_format(inputState.value) :
-          props.id === 'card_expiration' ? expiration_format(inputState.value) : inputState.value}
+        value={inputState.value}
         pattern={props.pattern}
+        placeholder={props.placeholder}
       />
     ) : (
       <textarea
@@ -108,7 +107,7 @@ const Input = props => {
       <label htmlFor={props.id}>{props.label}</label>
 
       {element}
-      {
+      {/* {
         <p className={
           inputState.value !== '' ? 'placeholder placeholder-touched' :
             inputState.isTouched && !inputState.isValid ? `placeholder placeholder-touched` : `placeholder`
@@ -117,7 +116,16 @@ const Input = props => {
           {inputState.isTouched && !inputState.isValid ? props.error_Text : props.custom_placeholder
           }
         </p>
-      }
+      } */}
+      <div className="input_border_wrapper">
+        <span
+          className='line_input'
+        ></span>
+        <span
+          className='line_input'
+        ></span>
+      </div>
+
     </div >
   );
 };

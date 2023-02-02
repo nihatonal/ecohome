@@ -1,3 +1,6 @@
+.house_selections_container.success_container {
+  padding-top: 84px;
+}
 .success_container .inputs-title {
   margin-bottom: 11px;
 }
@@ -7,10 +10,12 @@
   column-gap: 15px;
   margin: 43px 0;
 }
+
 .success_form_social_link p {
   font-size: 10px;
   margin-top: 3px;
 }
+
 .success_form_social_link_icon {
   width: 66px;
   height: 66px;
@@ -20,8 +25,63 @@
   align-items: center;
   justify-content: center;
   padding-top: 4px;
+  transition: all 0.3s;
+}
+.success_form_social_link:hover > .success_form_social_link_icon {
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0 0 10px #fff;
 }
 
 .success_form_wrapper {
   width: 522px;
+}
+
+.email_input input::placeholder {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.submit_button {
+  width: 243.33px;
+  height: 64px;
+  background: none;
+  border: 1px solid #ffffff;
+  border-radius: 55px;
+  font-family: var(--font-golos);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 113%;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 48px;
+  margin-bottom: 18px;
+}
+.submit_button svg {
+  margin-right: 17px;
+}
+.active_submit_button:hover {
+  background: #fff;
+  color: #1f252d;
+  box-shadow: 0 0 10px #fff;
+}
+.submit_button:disabled {
+  cursor: not-allowed;
+}
+.input_phone {
+  margin: 56px 0;
+}
+
+.submit_text {
+  font-family: var(--font-golos);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  text-align: center;
+  color: #ffffff;
+  width: 522px;
+  height: 40px;
 }

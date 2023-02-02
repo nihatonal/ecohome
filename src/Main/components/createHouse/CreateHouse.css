@@ -196,3 +196,8 @@
   top: 485px;
   left: 182px;
 }
+
+.create_house_section_wrapper {
+  position: absolute;
+  opacity: 0;
+}
