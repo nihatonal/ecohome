@@ -224,7 +224,7 @@
   width: 100%;
 }
 
-@keyframes slide__in {
+@keyframes part__in {
   from {
     transform: translateX(200%);
   }
@@ -233,7 +233,7 @@
     transform: translateX(0%);
   }
 }
-@keyframes slide__out {
+@keyframes part__out {
   from {
     transform: translateX(0%);
   }
@@ -242,14 +242,14 @@
     transform: translateX(-200%);
   }
 }
-.slide__in {
-  animation-name: slide__in;
+.part__in {
+  animation-name: part__in;
   animation-duration: 1.5s;
   animation-fill-mode: forwards;
   animation-timing-function: ease-in-out;
 }
-.slide__out {
-  animation-name: slide__out;
+.part__out {
+  animation-name: part__out;
   animation-duration: 1.5s;
   animation-fill-mode: forwards;
   animation-timing-function: ease-in-out;

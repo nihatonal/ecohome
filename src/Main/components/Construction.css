@@ -42,6 +42,7 @@
   width: 100%;
   height: 675px;
   position: relative;
+  border: 1px solid red;
 }
 .construction_content-item {
   position: absolute;

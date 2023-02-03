@@ -63,8 +63,8 @@ function CreateHouse(props) {
                 {data.map((el) =>
                     <div key={el.id}
                         className={el.id === `item_${activeId}` ?
-                            'create_house_section_wrapper slide__in' :
-                            'create_house_section_wrapper slide__out'}
+                            'create_house_section_wrapper part__in' :
+                            'create_house_section_wrapper part__out'}
                         id={el.id}>
                         {el.item}
                     </div>
