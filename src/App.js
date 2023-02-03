@@ -10,7 +10,6 @@ import ScrollButton from "./shared/UI/ScrollButton";
 import ScrollToTop from './shared/util/ScrollToTop';
 
 import Main from "./Main/page/Main";
-
 import './App.css'
 function App() {
 
@@ -26,7 +25,7 @@ function App() {
               <Route exact path="/" element={<Main />} />
               <Route exact path="*" element={<Main />} />
             </Routes>
-            {/* <Footer /> */}
+            <Footer />
           </ScrollToTop>
           <ScrollButton />
         </BrowserRouter>
