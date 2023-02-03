@@ -12,10 +12,10 @@ function Flats(props) {
         cart.addOneToCart('flat', e.currentTarget.name)
     };
     return (
-        <div style={props.style} className="house_selections_container house_construction_slide">
+        <div style={props.style} className="house_selections_container">
             <h3 className='inputs-title'>Сколько этажей вам нужно?</h3>
             <ul className="inputs_wrapper">
-                <li className={isRadio === 1 ? "input_wrapper checked_flat" : "input_wrapper"}>
+                <li className={isRadio === 1 ? "input_wrapper" : "input_wrapper"}>
                     <RadioButton
                         className='input_radio'
                         value='1'
@@ -28,7 +28,7 @@ function Flats(props) {
                 </li>
                 <li className={isRadio === 2 ? "input_wrapper checked_flat" : "input_wrapper"}>
                     <RadioButton
-                        className='flats_input_radio'
+                        className='input_radio'
                         value='2'
                         id='flat2'
                         name='1 этаж + мансарда'
@@ -39,7 +39,7 @@ function Flats(props) {
                 </li>
                 <li className={isRadio === 3 ? "input_wrapper checked_flat" : "input_wrapper"}>
                     <RadioButton
-                        className='flats_input_radio'
+                        className='input_radio'
                         value='3'
                         id='flat3'
                         name='2 этажа'
@@ -50,7 +50,7 @@ function Flats(props) {
                 </li>
                 <li className={isRadio === 4 ? "input_wrapper checked_flat" : "input_wrapper"}>
                     <RadioButton
-                        className='flats_input_radio'
+                        className='input_radio'
                         value='4'
                         id='flat4'
                         name='2 этажа + мансарда'
@@ -61,7 +61,7 @@ function Flats(props) {
                 </li>
                 <li className={isRadio === 5 ? "input_wrapper checked_flat" : "input_wrapper"}>
                     <RadioButton
-                        className='flats_input_radio'
+                        className='input_radio'
                         value='5'
                         id='flat5'
                         name='3 этажа'
@@ -72,7 +72,7 @@ function Flats(props) {
                 </li>
                 <li className={isRadio === 6 ? "input_wrapper checked_flat" : "input_wrapper"}>
                     <RadioButton
-                        className='flats_input_radio'
+                        className='input_radio'
                         value='6'
                         id='flat6'
                         name='Еще не определились'

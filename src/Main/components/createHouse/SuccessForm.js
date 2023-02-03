@@ -1,6 +1,6 @@
-import React from 'react';
+import React,{useContext} from 'react';
 import { ReactSVG } from 'react-svg';
-
+import { CartContext } from '../../../shared/context/CartContext';
 import { useForm } from "../../../shared/hooks/form-hook";
 import Input from '../../../shared/components/formElements/Input';
 import { VALIDATOR_REQUIRE, VALIDATOR_EMAIL, VALIDATOR_PHONE } from '../../../shared/util/validators'
@@ -12,6 +12,7 @@ import whatsapp from '../../../assets/icons/whatsapp.svg';
 import { BsFillPlayFill } from "react-icons/bs";
 import './SuccessForm.css'
 function SuccessForm(props) {
+    const cart =useContext(CartContext)
     const [formState, inputHandler] = useForm(
         {
             name: {
@@ -32,10 +33,11 @@ function SuccessForm(props) {
 
     const submitHandler = (e) => {
         e.preventDefault();
+        console.log(cart.items)
     }
 
     return (
-        <div style={props.style} className="house_selections_container success_container house_construction_slide">
+        <div style={props.style} className="house_selections_container success_container">
             <h3 className='inputs-title'>Мы получили данные и приступаем к расчетам</h3>
             <p className="input_name">Укажите куда выслать расчет стоимости?</p>
             <div className="success_form_social_links_wrapper">

@@ -22,7 +22,7 @@
     ),
     url("../../../assets/images/house_5.png") center no-repeat;
   background-size: contain;
-
+  overflow: hidden;
   /* background-color: #1f252d; */
 }
 
@@ -55,6 +55,21 @@
   padding: 0 20px;
   position: absolute;
   bottom: 18px;
+}
+.create-house-line_bar {
+  height: 1px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  grid-column: 1 / span 2;
+  position: relative;
+}
+.create-house-line_fill {
+  display: inline-block;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  top: -0.5px;
+  transition: all ease-in-out .5s;
 }
 .create-house-content-wrapper input[type="range"] {
   -webkit-appearance: none;
@@ -111,16 +126,24 @@
   font-size: 18px;
 }
 
-.create-house-nav_button:hover {
-  background: #fff;
-  color: #1f252d;
+.create-house-nav_button:disabled {
+  border: 1px solid #ffffff;
+}
+.create-house-nav_button_active {
+  background-color: #fff;
+  color: #21252c;
+}
+.create-house-nav_button_active:hover {
+  box-shadow: 0 0 10px #fff;
 }
 
 .house_selections_container {
+  width: 100%;
   padding: 0 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   padding-top: 43px;
 }
 .inputs_wrapper {
@@ -184,9 +207,8 @@
 .additionals_wrapper {
   list-style: none;
   position: relative;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  column-gap: 28px;
+  justify-content: space-evenly;
+  width: 100%;
 }
 .additionals_wrapper .house_input_wrapper {
   width: 400px;
@@ -199,5 +221,36 @@
 
 .create_house_section_wrapper {
   position: absolute;
-  opacity: 0;
+  width: 100%;
+}
+
+@keyframes slide__in {
+  from {
+    transform: translateX(200%);
+  }
+
+  to {
+    transform: translateX(0%);
+  }
+}
+@keyframes slide__out {
+  from {
+    transform: translateX(0%);
+  }
+
+  to {
+    transform: translateX(-200%);
+  }
+}
+.slide__in {
+  animation-name: slide__in;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+.slide__out {
+  animation-name: slide__out;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
 }

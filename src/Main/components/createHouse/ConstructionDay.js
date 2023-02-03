@@ -12,7 +12,7 @@ function ConstructionDay(props) {
         cart.addOneToCart('c_day', e.currentTarget.name)
     };
     return (
-        <div style={props.style} className="house_selections_container house_construction_slide">
+        <div style={props.style} className="house_selections_container">
             <h3 className='inputs-title'>Есть ли у вас участок?</h3>
             <ul className="inputs_wrapper">
                 <li className={isRadio === 1 ? "input_wrapper checked_flat" : "input_wrapper"}>
@@ -28,7 +28,7 @@ function ConstructionDay(props) {
                 </li>
                 <li className={isRadio === 2 ? "input_wrapper checked_flat" : "input_wrapper"}>
                     <RadioButton
-                        className='flats_input_radio'
+                        className='input_radio'
                         value='2'
                         id='c_day2'
                         name='В этом году'
@@ -39,7 +39,7 @@ function ConstructionDay(props) {
                 </li>
                 <li className={isRadio === 3 ? "input_wrapper checked_flat" : "input_wrapper"}>
                     <RadioButton
-                        className='flats_input_radio'
+                        className='input_radio'
                         value='3'
                         id='c_day3'
                         name='В следующем году'
@@ -50,7 +50,7 @@ function ConstructionDay(props) {
                 </li>
                 <li className={isRadio === 4 ? "input_wrapper checked_flat" : "input_wrapper"}>
                     <RadioButton
-                        className='flats_input_radio'
+                        className='input_radio'
                         value='4'
                         id='c_day4'
                         name='Еще не определились'

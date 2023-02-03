@@ -19,7 +19,7 @@ function StyleOfHouse(props) {
         cart.addOneToCart('style', e.currentTarget.name)
     };
     return (
-        <div style={props.style} className="house_selections_container house_construction_slide">
+        <div style={props.style} className="house_selections_container">
             <h3 className='inputs-title'>Какой стиль ближе?</h3>
             <ul className="inputs_wrapper stlyes_wrapper">
                 <li className={"house_input_wrapper "}>

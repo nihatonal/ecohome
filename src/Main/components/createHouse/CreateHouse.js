@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import { ReactSVG } from 'react-svg';
 import { CartContext } from '../../../shared/context/CartContext';
 import TypeOfHouse from './TypeOfHouse';
@@ -15,7 +15,6 @@ import './CreateHouse.css';
 function CreateHouse(props) {
     const cart = useContext(CartContext);
     const [activeId, setActiveId] = useState(1);
-    console.log(cart.items)
 
     const data = [
         {
@@ -62,22 +61,35 @@ function CreateHouse(props) {
             <h3 className="section-title">Получите предварительный расчет стоимости дома за 1 минуту</h3>
             <div className="create-house-content-wrapper" id='construct_house'>
                 {data.map((el) =>
-                    <div key={el.id} style={el.id === `item_${activeId}` ? { opacity: "1" } : null}
-                        className='create_house_section_wrapper'
+                    <div key={el.id}
+                        className={el.id === `item_${activeId}` ?
+                            'create_house_section_wrapper slide__in' :
+                            'create_house_section_wrapper slide__out'}
                         id={el.id}>
                         {el.item}
                     </div>
                 )}
 
-                <div className={'create-house-nav-wrapper'}>
-                    <input type='range' min='1' max='7' />
+                {activeId !== 8 && <div className={'create-house-nav-wrapper'}>
+                    <div className={'create-house-line_bar'}>
+                        <span
+                            className={'create-house-line_fill'}
+                            style={{ width: `${14.285*activeId}%`}}
+                        ></span>
+                    </div>
+                    {/* <input type='range' min='1' max='7' /> */}
                     <p className={'create-house-nav-info'}>
                         <span className='create-house-nav-info_active'>{activeId}</span>/<span>07</span>
                     </p>
-                    <button onClick={nextHandlder} className="create-house-nav_button">
+                    <button
+                        onClick={nextHandlder}
+                        className={cart.items.length === activeId ? "create-house-nav_button create-house-nav_button_active" : "create-house-nav_button"}
+                        disabled={cart.items.length !== activeId}
+
+                    >
                         Далее <BsFillPlayFill />
                     </button>
-                </div>
+                </div>}
             </div>
 
         </div >

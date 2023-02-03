@@ -15,7 +15,7 @@ function AdditionalBuildings(props) {
         cart.addOneToCart('additional', e.currentTarget.name)
     };
     return (
-        <div style={props.style} className="house_selections_container house_construction_slide">
+        <div style={props.style} className="house_selections_container">
             <h3 className='inputs-title'>Нужны ли дополнительные строения на участке?</h3>
             <ul className="inputs_wrapper additionals_wrapper">
                 <li className={"house_input_wrapper "}>
