@@ -1,6 +1,12 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
+import { FaYoutube } from "react-icons/fa";
+import { FaTelegramPlane } from "react-icons/fa";
+import { FaWhatsapp } from "react-icons/fa";
+import { FaVk } from "react-icons/fa";
+import { FaOdnoklassniki } from "react-icons/fa";
+import footer_bg from '../../assets/images/ecohome.png'
 import './Footer.css';
 function Footer(props) {
     const data = [
@@ -52,7 +58,31 @@ function Footer(props) {
                 </div>
                 <span className="footer_line"></span>
                 <div className="footer_bottom_content">
-
+                    <div className="footer_bottom_content-info">
+                        <p className="footer_bottom_content-info-title">ЭкоДом</p>
+                        <p className="footer_bottom_content-info-tel">+7 (474) 24 24 24</p>
+                        <p className="footer_bottom_content-info-tel tel_2">8 (930) 014 24 78</p>
+                        <div className="footer_bottom_content-social-links">
+                            <a href='#' className="footer_bottom_content-social-link">
+                                <FaYoutube />
+                            </a>
+                            <a href='#' className="footer_bottom_content-social-link">
+                                <FaTelegramPlane />
+                            </a>
+                            <a href='#' className="footer_bottom_content-social-link">
+                                <FaOdnoklassniki />
+                            </a>
+                            <a href='#' className="footer_bottom_content-social-link">
+                                <FaWhatsapp />
+                            </a>
+                            <a href='#' className="footer_bottom_content-social-link">
+                                <FaVk />
+                            </a>
+                        </div>
+                        <p className="footer_bottom_content-subinfo">«Эко Дом» Строительство каркасных домов</p>
+                        <p className="footer_bottom_content-subinfo">© 2012-2021 Все права защищены</p>
+                    </div>
+                    <img src={footer_bg} alt={'footer_bg'} />
                 </div>
             </div>
 
