@@ -18,3 +18,9 @@
   text-shadow: var(--text-shadow);
   text-align: center;
 }
+
+@media screen and (max-width: 767px) {
+  .section-title {
+    font-size: 26px;
+  }
+}

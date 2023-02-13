@@ -41,3 +41,28 @@
   justify-content: center;
   margin-right: 24px;
 }
+
+@media screen and (max-width: 767px) {
+  .section-profit-container {
+    margin-top: 20px;
+    height: auto;
+  }
+  .section-profit-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .section-profit-content-items {
+    width: 100%;
+    height: 392px;
+    margin: 20px 0;
+  }
+  .section-profit-content-item {
+    display: grid;
+    width: 100%;
+    grid-template-columns: auto auto;
+  }
+  .section-profit-content img {
+    width: 100%;
+  }
+}
