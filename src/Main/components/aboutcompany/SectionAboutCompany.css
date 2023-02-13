@@ -17,4 +17,19 @@
   align-self: flex-end;
   margin-bottom: 44px;
 }
+@media screen and (max-width: 767px) {
+  .section_about-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding-top: 0;
+  }
+  .section_about-wrapper .section_about-title {
+    margin-top: 37px;
+  }
+  .section_about-video-wrapper {
+    width: 100%;
+    height: 212px;
+    margin: 20px 0;
+  }
 
+}

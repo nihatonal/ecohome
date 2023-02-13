@@ -50,8 +50,8 @@ function Footer(props) {
                         </div>
                     )}
                     <div className="footer_top_bar_item">
-                        {data[data.length - 1].list.map((item) =>
-                            <NavLink className="footer_link_item_title">{item}</NavLink>
+                        {data[data.length - 1].list.map((item,index) =>
+                            <NavLink key={index} className="footer_link_item_title">{item}</NavLink>
                         )}
 
                     </div>
@@ -63,19 +63,19 @@ function Footer(props) {
                         <p className="footer_bottom_content-info-tel">+7 (474) 24 24 24</p>
                         <p className="footer_bottom_content-info-tel tel_2">8 (930) 014 24 78</p>
                         <div className="footer_bottom_content-social-links">
-                            <a href='#' className="footer_bottom_content-social-link">
+                            <a href='https://www.youtube.com/channel/UCxiny3Palwrf9ow5E5Yx4pA' className="footer_bottom_content-social-link">
                                 <FaYoutube />
                             </a>
-                            <a href='#' className="footer_bottom_content-social-link">
+                            <a href='https://www.youtube.com/channel/UCxiny3Palwrf9ow5E5Yx4pA' className="footer_bottom_content-social-link">
                                 <FaTelegramPlane />
                             </a>
-                            <a href='#' className="footer_bottom_content-social-link">
+                            <a href='https://www.youtube.com/channel/UCxiny3Palwrf9ow5E5Yx4pA' className="footer_bottom_content-social-link">
                                 <FaOdnoklassniki />
                             </a>
-                            <a href='#' className="footer_bottom_content-social-link">
+                            <a href='https://www.youtube.com/channel/UCxiny3Palwrf9ow5E5Yx4pA' className="footer_bottom_content-social-link">
                                 <FaWhatsapp />
                             </a>
-                            <a href='#' className="footer_bottom_content-social-link">
+                            <a href='https://www.youtube.com/channel/UCxiny3Palwrf9ow5E5Yx4pA' className="footer_bottom_content-social-link">
                                 <FaVk />
                             </a>
                         </div>

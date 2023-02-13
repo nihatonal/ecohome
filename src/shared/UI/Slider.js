@@ -7,11 +7,9 @@ import './Slider.css';
 const Slider = ({ slides }) => {
     const ref = useRef(null);
     const cart = useContext(CartContext);
-    const [current, setCurrent] = useState(0);
     const length = slides.length;
     const [widthSlide, setWidthSlide] = useState(0);
     const [counter, setCounter] = React.useState(0);
-    const [max, setMax] = useState(0)
     const intervalRef = React.useRef(null);
     useEffect(() => {
         setWidthSlide(ref.current.offsetWidth)

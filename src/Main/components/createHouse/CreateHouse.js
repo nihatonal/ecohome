@@ -1,5 +1,5 @@
-import React, { useContext, useState, useEffect } from 'react';
-import { ReactSVG } from 'react-svg';
+import React, { useContext, useState } from 'react';
+
 import { CartContext } from '../../../shared/context/CartContext';
 import TypeOfHouse from './TypeOfHouse';
 import Flats from './Flats';

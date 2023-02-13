@@ -72,7 +72,6 @@
   line-height: 130%;
   letter-spacing: 0.06em;
   color: rgba(255, 255, 255, 0.1);
-
   transform: rotate(-90deg);
 }
 .about_nav_item {
@@ -143,4 +142,66 @@
   letter-spacing: -0.02em;
   color: rgba(255, 255, 255, 0.8);
   text-shadow: var(--text-shadow);
+}
+
+@media screen and (max-width: 767px) {
+  .aboutcompany-container {
+    height: 700px;
+  }
+  .aboutcompany-wrapper {
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+  }
+  .aboutcompany-navs {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    height: 115px;
+    z-index: 99;
+  }
+  .aboutcompany-navs ul {
+    width: 100%;
+    height: 95px;
+    margin: 20px 0 0 40px;
+  }
+  .aboutcompany-navs ul::before {
+    left: -80px;
+  }
+
+  .p-138 {
+    padding: 0 20px;
+  }
+  .about_nav_item {
+    font-size: 18px;
+  }
+  .about_nav_item:hover {
+    opacity: 1;
+  }
+  .about_nav_item:nth-last-child(1) {
+    font-weight: 300;
+    font-size: 12px;
+  }
+  
+  .active_about_nav_item {
+    font-weight: 600;
+    font-size: 24px;
+    opacity: 1;
+  }
+  .active_about_nav_item.about_nav_item:nth-last-child(1) {
+    font-weight: 600;
+    font-size: 24px;
+    opacity: 1;
+  }
+  .section_about-title {
+    font-size: 32px;
+  }
+  .section_about-content-text {
+    font-size: 14px;
+  }
+  .aboutcompany-content .line-wrappers {
+    display: none;
+  }
+  
+  
 }

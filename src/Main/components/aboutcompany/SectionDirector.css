@@ -5,8 +5,8 @@
   column-gap: 40px;
 }
 .section_director-wrapper img {
-    grid-row: 1 / span 2;
-    margin-top: 80px;
+  grid-row: 1 / span 2;
+  margin-top: 80px;
 }
 .section_director-wrapper .section_about-title {
   margin-top: auto;
@@ -15,4 +15,26 @@
 .section_director-wrapper .section_about-content-text {
   grid-column: 2;
   margin-bottom: auto;
+}
+
+@media screen and (max-width: 767px) {
+  .section_director-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding-top: 0;
+    column-gap: 0;
+  }
+  .section_director-wrapper img {
+    align-self: center;
+    margin-top: 37px;
+    width: 80%;
+  }
+  .section_director-wrapper .section_about-title {
+    margin-top: auto;
+    margin: 20px 0;
+  }
+  .section_director-wrapper .section_about-content-text {
+    grid-column: 2;
+    margin-bottom: auto;
+  }
 }

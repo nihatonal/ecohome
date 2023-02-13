@@ -14,3 +14,25 @@
   margin-top: 24px;
   list-style-position: inside;
 }
+
+@media screen and (max-width: 767px) {
+  .section_faq-wrapper {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 37px;
+  }
+  .section_faq-wrapper img {
+    width: 100%;
+  }
+  .section_faq-wrapper ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 186px;
+    margin-top: 24px;
+    list-style-position: inside;
+  }
+}

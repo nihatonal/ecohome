@@ -22,16 +22,7 @@ function ArgumentOfHouse(props) {
         }
 
     ];
-    const style_inactive = {
-        // position: "absolute",
-        opacity: 0,
-        transition: "all ease .4s"
-    }
-    const style_active = {
-        // position: "absolute",
-        opacity: 1,
-        transition: "all ease .4s"
-    }
+
     return (
         <div className="argumentofhouse-container">
             <div className="argumentofhouse-wrapper">
