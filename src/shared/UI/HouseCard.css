@@ -89,3 +89,16 @@
 .house_price button svg path {
   fill: #1f252d;
 }
+
+@media screen and (max-width: 767px) {
+  .house {
+    width: 385px;
+    height: 481px;
+    margin-right: 0;
+    border-radius: 12px;
+    box-shadow: 2px 2px 15px #1f252d69;
+    position: absolute;
+    opacity: 0;
+    transition: all 0.3s;
+  }
+}

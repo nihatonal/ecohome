@@ -19,7 +19,7 @@ function HouseCard(props) {
         }
     }, [inView])
     return (
-        <div className="house" ref={ref}>
+        <div className="house" ref={ref} style={props.style}>
             <img src={data.image} alt='travel' />
             <div className="house-content">
                 <div className='house_info'>

@@ -9,29 +9,35 @@ import image_item5 from '../../assets/images/construction_5.png';
 
 import arrowfromup from '../../assets/icons/arrow_fromup.svg';
 import arrowfromdown from '../../assets/icons/arrow_fromdown.svg';
+import ConstructionSlider from '../../shared/UI/ConstructionSlider';
 import './Construction.css';
 function Construction(props) {
     const [activeId, setActiveId] = useState('step-1');
     const navs = [
         {
             id: 'step-1',
-            text: "Фундамент"
+            text: "Фундамент",
+            image:require('../../assets/images/construction_1.png')
         },
         {
             id: 'step-2',
-            text: "Сборка и Монтаж дома"
+            text: "Сборка и Монтаж дома",
+            image:require('../../assets/images/construction_2.png')
         },
         {
             id: 'step-3',
-            text: "Инженерные системы"
+            text: "Инженерные системы",
+            image:require('../../assets/images/construction_3.png')
         },
         {
             id: 'step-4',
-            text: "Отделка"
+            text: "Отделка",
+            image:require('../../assets/images/construction_4.png')
         },
         {
             id: 'step-5',
-            text: "Отзыв клиента"
+            text: "Отзыв клиента",
+            image:require('../../assets/images/construction_5.png')
         }
 
     ];
@@ -65,7 +71,8 @@ function Construction(props) {
 
                 </ul>
                 <div className="construction_content-wrapper">
-                    <div
+                    <ConstructionSlider data={navs} active ={activeId}/>
+                    {/* <div
                         style={activeId === 'step-5' ? { zIndex: '8' } : null}
                         className={activeId === 'step-1' ? 'construction_content-item active_construction_item' : "construction_content-item slide__out"}
                     >
@@ -123,7 +130,7 @@ function Construction(props) {
                     >
                         <img src={image_item5} alt={"image_item"} />
                     </div>
-
+                    */}
                 </div>
             </div>
         </div>

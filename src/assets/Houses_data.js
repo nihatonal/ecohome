@@ -51,9 +51,9 @@ export const Houses_data = [
   },
   {
     id: "house_6",
-    name: "Дом «Эверест»",
+    name: "Дом «Эверест 2»",
     square: "180",
-    rooms: "6",
+    rooms: "4",
     flats: "2",
     size: "12x12",
     price: " 5 000 000",
@@ -61,9 +61,9 @@ export const Houses_data = [
   },
   {
     id: "house_7",
-    name: "Дом «Эверест»",
-    square: "180",
-    rooms: "6",
+    name: "Дом «Эверест 3»",
+    square: "280",
+    rooms: "7",
     flats: "2",
     size: "12x12",
     price: " 5 000 000",
@@ -71,10 +71,10 @@ export const Houses_data = [
   },
   {
     id: "house_8",
-    name: "Дом «Эверест»",
+    name: "Дом «Эверест 4»",
     square: "180",
-    rooms: "6",
-    flats: "2",
+    rooms: "5",
+    flats: "1",
     size: "12x12",
     price: " 5 000 000",
     "image": require("./images/our_project_2.png")
