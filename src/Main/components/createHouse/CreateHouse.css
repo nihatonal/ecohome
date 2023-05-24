@@ -69,7 +69,7 @@
   background-color: rgba(255, 255, 255, 0.5);
   position: absolute;
   top: -0.5px;
-  transition: all ease-in-out .5s;
+  transition: all ease-in-out 0.5s;
 }
 .create-house-content-wrapper input[type="range"] {
   -webkit-appearance: none;
@@ -146,6 +146,7 @@
   justify-content: center;
   padding-top: 43px;
 }
+
 .inputs_wrapper {
   list-style: none;
   position: relative;
@@ -167,6 +168,33 @@
   display: flex;
   align-items: center;
   padding-left: 20px;
+}
+@media screen and (max-width: 767px) {
+  .plot .inputs_wrapper {
+    list-style: none;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  .plot .input_wrapper {
+    width: 100%;
+    height: 54px;
+    padding: 0 10px;
+  }
+  .plot .input_wrapper:last-child {
+    margin-bottom: 120px;
+  }
+  .plot .input_wrapper .input_name {
+    line-height: 36px;
+    margin-left: 10px;
+    font-size: 12px;
+  }
+  .inputs-title {
+    font-size: 18px;
+    margin-bottom: 31px;
+    text-align: center;
+  }
 }
 .checked_flat {
   border: 1px solid rgba(255, 255, 255, 1);
@@ -195,11 +223,11 @@
 }
 
 /*style_section*/
-.stlyes_wrapper .house_input_wrapper {
+.styles_wrapper .house_input_wrapper {
   width: 303px;
   height: 240px;
 }
-.stlyes_wrapper .house_input_radio {
+.styles_wrapper .house_input_radio {
   top: 182px;
   left: 133px;
 }
@@ -253,4 +281,36 @@
   animation-duration: 1.5s;
   animation-fill-mode: forwards;
   animation-timing-function: ease-in-out;
+}
+
+@media screen and (max-width: 767px) {
+  .create-house-container {
+    height: auto;
+  }
+  .create-house-content-wrapper {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow-y: auto;
+    border-radius: 12px;
+    /* background-color: #1f252d; */
+  }
+
+  .create-house-nav-wrapper {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 10px;
+    padding: 20px;
+    position: sticky;
+    top: 405px;
+    background-color: rgba(0, 0, 0, 0.65);
+  }
+  .create-house-container .section-suptitle {
+    font-size: 12px;
+  }
+  .create-house-container .section-title {
+    font-size: 18px;
+    width: 95%;
+  }
 }

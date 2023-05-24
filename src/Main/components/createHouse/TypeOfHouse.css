@@ -25,3 +25,10 @@
 .house_input_wrapper .input_name {
   margin-top: 22px;
 }
+
+@media screen and (max-width: 767px) {
+  .house_input_wrapper:last-child {
+    margin-bottom:110px
+  }
+
+}

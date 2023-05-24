@@ -12,7 +12,7 @@ function SizeOfHouse(props) {
         cart.addOneToCart('size', e.currentTarget.name)
     };
     return (
-        <div style={props.style} className="house_selections_container">
+        <div style={props.style} className="house_selections_container plot">
             <h3 className='inputs-title'>Выберете желаемые размеры дома</h3>
             <ul className="inputs_wrapper">
                 <li className={isRadio === 1 ? "input_wrapper checked_flat" : "input_wrapper"}>

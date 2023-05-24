@@ -33,7 +33,6 @@ function SectionProjects(props) {
         if (inView) {
             // document.location.replace('/#works')
         }
-        console.log(windowSize[0])
     }, [inView])
     return (
         <div ref={ref} id='works' className="section-projects">

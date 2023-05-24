@@ -19,9 +19,9 @@ function StyleOfHouse(props) {
         cart.addOneToCart('style', e.currentTarget.name)
     };
     return (
-        <div style={props.style} className="house_selections_container">
+        <div style={props.style} className="house_selections_container input_with_photos">
             <h3 className='inputs-title'>Какой стиль ближе?</h3>
-            <ul className="inputs_wrapper stlyes_wrapper">
+            <ul className="inputs_wrapper styles_wrapper">
                 <li className={"house_input_wrapper "}>
                     <img src={style_1} alt='style_1' />
                     <RadioButton

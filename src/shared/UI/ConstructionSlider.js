@@ -6,13 +6,16 @@ import image_item3 from '../../assets/images/construction_3.png';
 import image_item4 from '../../assets/images/construction_4.png';
 import image_item5 from '../../assets/images/construction_5.png';
 import './ConstructionSlider.css'
-function ConstructionSlider({ data, active }) {
+function ConstructionSlider({ data, active,onClick }) {
     return (
         <div className="constructionSlider_wrapper">
             {data.map((el) =>
-                <div
-                    style={{ backgroundImage: `url(${el.image})` }}
-                    className={active === el.id ? "constructionSlider_item active_constructionSlide" : "constructionSlider_item"}>
+                <div className="constructionSlider_item-wrapper" onClick={onClick} >
+                    <div
+                        style={{ backgroundImage: `url(${el.image})` }}
+                        id={el.id}
+                        className={active === el.id ? "constructionSlider_item active_constructionSlide" : "constructionSlider_item"}>
+                    </div>
                 </div>
             )}
             {/* <div

@@ -85,3 +85,42 @@
   width: 522px;
   height: 40px;
 }
+
+@media screen and (max-width: 767px) {
+  .house_selections_container.success_container {
+    padding-top: 34px;
+  }
+  .success_form_social_links_wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 15px;
+    margin: 23px 0;
+  }
+  .success_form_social_link_icon {
+    width: 66px;
+    height: 66px;
+    padding-top: 4px;
+    margin: 0;
+  }
+  .success_form_social_link p {
+    font-size: 10px;
+    margin-top: 5px;
+  }
+  .success_form_wrapper {
+    width: 100%;
+  }
+  .input_phone {
+    margin: 16px 0;
+  }
+  .submit_button {
+    width: 243.33px;
+    height: 44px;
+    border-radius: 35px;
+    margin-top: 28px;
+    margin-bottom: 18px;
+  }
+  .submit_text {
+    font-size: 10px;
+    width: 100%;
+  }
+}

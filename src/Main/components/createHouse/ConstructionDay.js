@@ -12,7 +12,7 @@ function ConstructionDay(props) {
         cart.addOneToCart('c_day', e.currentTarget.name)
     };
     return (
-        <div style={props.style} className="house_selections_container">
+        <div style={props.style} className="house_selections_container plot">
             <h3 className='inputs-title'>Есть ли у вас участок?</h3>
             <ul className="inputs_wrapper">
                 <li className={isRadio === 1 ? "input_wrapper checked_flat" : "input_wrapper"}>

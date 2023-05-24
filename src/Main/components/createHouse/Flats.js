@@ -12,7 +12,7 @@ function Flats(props) {
         cart.addOneToCart('flat', e.currentTarget.name)
     };
     return (
-        <div style={props.style} className="house_selections_container">
+        <div style={props.style} className="house_selections_container plot">
             <h3 className='inputs-title'>Сколько этажей вам нужно?</h3>
             <ul className="inputs_wrapper">
                 <li className={isRadio === 1 ? "input_wrapper" : "input_wrapper"}>

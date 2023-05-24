@@ -152,6 +152,10 @@
 }
 
 @media screen and (max-width: 767px) {
+  .construction-container {
+    height: auto;
+    margin: 50px 0;
+  }
   .construction-wrapper {
     width: 100%;
     display: flex;
