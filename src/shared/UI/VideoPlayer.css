@@ -1,7 +1,7 @@
 .video-container {
   width: 100%;
   height: 212px;
-  border-radius: 12px;
+ 
 }
 .video-wrapper {
   width: 100%;
@@ -43,6 +43,15 @@
   align-self: flex-end;
   padding: 0 9px;
 }
+.actions {
+  width: 100%;
+  height: 212px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+}
 .actions button {
   background: none;
   border: none;
@@ -54,7 +63,7 @@
   background: rgba(255, 255, 255, 0.25);
   border-radius: 50%;
   font-size: 22px;
-  position: absolute;
+
   top: 76px;
   left: 158px;
   z-index: 99;
