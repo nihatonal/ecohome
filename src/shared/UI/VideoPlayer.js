@@ -32,17 +32,18 @@ function VideoPlayer(props) {
                     ref={videoElement}
                     onTimeUpdate={handleOnTimeUpdate}
                 />
+                <div className="actions">
+                    {!playerState.isPlaying ?
+                        (<button onClick={togglePlay}>
+
+                            <IoMdPlay /></button>
+                        ) : (
+                            <button onClick={togglePlay}><IoMdPause /></button>
+                        )}
+
+                </div>
                 <div className="controls">
-                    <div className="actions">
-                        {!playerState.isPlaying ?
-                            (<button onClick={togglePlay}>
 
-                                <IoMdPlay /></button>
-                            ) : (
-                                <button onClick={togglePlay}><IoMdPause /></button>
-                            )}
-
-                    </div>
                     <div className="controls_buttons">
                         <input
                             type="range"
