@@ -1,6 +1,6 @@
-import React, { useState, useRef, useEffect, useContext } from 'react';
+import React, { useState } from 'react';
 import { ReactSVG } from 'react-svg';
-import { CartContext } from '../context/CartContext';
+
 import arrow from '../../assets/icons/right_arrow.svg';
 import HouseCard from '../../shared/UI/HouseCard';
 

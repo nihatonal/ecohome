@@ -43,9 +43,9 @@ const Accordion = ({ faqs, arrow_down, arrow_up, AccordionItem, }) => {
                     faq={faq}
                     arrow_down={arrow_down}
                     arrow_up={arrow_up}
-                    // checkboxHandler={(e) => checkboxHandler(e, index)}
-                    // value={faq.price}
-                    // checked={checkedState[index]}
+                // checkboxHandler={(e) => checkboxHandler(e, index)}
+                // value={faq.price}
+                // checked={checkedState[index]}
 
                 />
             ))}
